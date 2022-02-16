@@ -3,22 +3,20 @@ package com.alkemy.icons.icons.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-
 import javax.persistence.*;
 
-
 @Entity
-@Table(name = "continente")
+@Table(name = "continent")
 @Getter
 @Setter
-public class ContinenteEntity {
+public class ContinentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    private String imagen;
+    private String image;
 
-    private String denominacion;
+    private String nomination;
 
 }

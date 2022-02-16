@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "2badf59b-c479-4108-b3ae-5aa8a9fc5a8c",
+		"name": "Alkemy-Lab-Icons",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "continents",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"image\": \"/usr/tmp/Eur.jpg\",\r\n    \"nomination\": \"Europe\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/continents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"continents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "icons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\": \"/usr/tmp/Pan.jpg\",\r\n    \"denominacion\": \"Panteon de Roma\",\r\n    \"fechaCreacion\" : \"0125-01-01\",\r\n    \"altura\" : \"44\",\r\n    \"historia\" : \"El Panteón de Agripa o Panteón de Roma es un antiguo templo romano.\",\r\n    \"paisId\" : 2 \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/icons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"icons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"image\": \"/usr/tmp/Fra.jpg\",\r\n    \"nomination\": \"France\",\r\n    \"population\": \"67390000\",\r\n    \"area\": \"543940\",\r\n    \"continentId\": 1,\r\n    \"iconDTOS\": [\r\n        {   \"image\": \"/usr/tmp/torE.jpg\",\r\n            \"nomination\": \"Torre Eiffel\",\r\n            \"creationDate\": \"1889-03-31\",\r\n            \"height\": \"324\",\r\n            \"history\": \"Situada en el extremo del Campo de Marte a la orilla del río Sena, este monumento parisino, símbolo de Francia y de su capital, es la estructura más alta de la ciudad y el monumento que cobra entrada más visitado del mundo\", \r\n            \"countryDTOS\" : []\r\n        },\r\n        {   \"image\": \"/usr/tmp/ArcD.jpg\",\r\n            \"nomination\": \"Arco de La Défense\",\r\n            \"creationDate\": \"1989-01-01\",\r\n            \"height\": \"111\",\r\n            \"history\": \"Es un edificio de oficinas situado en el distrito financiero de La Défense, al oeste de París, en el territorio del municipio de Puteaux\",\r\n            \"countryDTOS\" : [] \r\n        },\r\n        {   \"image\": \"/usr/tmp/Luv.jpg\",\r\n            \"nomination\": \"Museo del Louvre\",\r\n            \"creationDate\": \"1793-11-08\",\r\n            \"height\": \"22\",\r\n            \"history\": \"Es el museo nacional de Francia consagrado tanto a las bellas artes como a la arqueología y las artes decorativas anteriores al Impresionismo. Está ubicado en París, la capital del país, en el antiguo palacio real del Louvre.\",\r\n            \"countryDTOS\" : [] \r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/countries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "continents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/continents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"continents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "icons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/icons/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"icons",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "icon/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/icons/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"icons",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "icons?filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/icons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"icons"
+					],
+					"query": [
+						{
+							"key": "nomination",
+							"value": "Basílica de San Pedro",
+							"disabled": true
+						},
+						{
+							"key": "creationDate",
+							"value": "1793-11-08",
+							"disabled": true
+						},
+						{
+							"key": "countries",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "icon/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/icons/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"icons",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "icon/id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"image\": \"/usr/tmp/Pis.jpg\",\r\n            \"nomination\": \"Torre de Pisa\",\r\n            \"creationDate\": \"1173-08-09\",\r\n            \"height\": 60,\r\n            \"history\": \"La torre campanario esta situada en la plaza del Duomo de Pisa, municipio de la región italiana de la Toscana y capital de la provincia.\",\r\n            \"countryId\": 2,\r\n            \"countryDTOS\": null\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/icons/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"icons",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "country/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countries?filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries"
+					],
+					"query": [
+						{
+							"key": "nomination ",
+							"value": "Italy",
+							"disabled": true
+						},
+						{
+							"key": "continentId",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "ASC",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "DESC",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "country/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "country/id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"image\": \"/usr/tmp/Fra.jpg\",\r\n    \"nomination\": \"France\",\r\n    \"population\": \"67390000\",\r\n    \"area\": \"543980\",\r\n    \"continentId\": 1,\r\n        \"iconDTOS\": [\r\n        {   \"image\": \"/usr/tmp/torE.jpg\",\r\n            \"nomination\": \"Torre Eiffel\",\r\n            \"creationDate\": \"1889-03-31\",\r\n            \"height\": \"324\",\r\n            \"history\": \"Situada en el extremo del Campo de Marte a la orilla del río Sena, este monumento parisino, símbolo de Francia y de su capital, es la estructura más alta de la ciudad y el monumento que cobra entrada más visitado del mundo\", \r\n            \"countryDTOS\" : []\r\n        },\r\n        {   \"image\": \"/usr/tmp/ArcD.jpg\",\r\n            \"nomination\": \"Arco de La Défense\",\r\n            \"creationDate\": \"1989-01-01\",\r\n            \"height\": \"111\",\r\n            \"history\": \"Es un edificio de oficinas situado en el distrito financiero de La Défense, al oeste de París, en el territorio del municipio de Puteaux\",\r\n            \"countryDTOS\" : [] \r\n        },\r\n        {   \"image\": \"/usr/tmp/Luv.jpg\",\r\n            \"nomination\": \"Museo del Louvre\",\r\n            \"creationDate\": \"1793-11-08\",\r\n            \"height\": \"22\",\r\n            \"history\": \"Es el museo nacional de Francia consagrado tanto a las bellas artes como a la arqueología y las artes decorativas anteriores al Impresionismo. Está ubicado en París, la capital del país, en el antiguo palacio real del Louvre.\",\r\n            \"countryDTOS\" : [] \r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/countries/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
